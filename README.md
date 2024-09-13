@@ -1,21 +1,19 @@
-# Kaggle_Cassava_Leaf_Disease_Classification
-## COMP9417 - Tree Leaf Classification Project
+# Kaggle Competition: Cassava Leaf Disease Classification
 
-### Overview
+## DateSet
 
-This project focuses on classifying tree leaves using advanced deep learning models. By applying ResNet and ResNeXt models and integrating efficient optimizers, we achieved significant accuracy in leaf classification. Our approach leverages the power of PyTorch and NumPy for data preprocessing, enhancing model performance.
+21,367 labeled images collected during regular surveys in Uganda provided by Kaggle.
 
-### Key Features
+## Achievement
 
-Model Application: Utilized ResNet and ResNeXt models for leaf classification.
-Optimization Techniques: Implemented AdamW and SGD optimizers to enhance model efficiency.
-High Accuracy: Achieved 92% accuracy using the ResNeXt50 model with SGD optimizer, validated through 10-fold cross-validation.
-Data Preprocessing: Developed robust preprocessing pipelines using PyTorch and NumPy, improving model performance by 25%.
-Team Collaboration: Collaborated with a team of three data scientists, using GitHub for effective version control and project management.
-Getting Started
+1. Balanced sampling：
 
-### To get started with this project:
+  In the case where there are significantly more label 3 than other labels, balanced sampling is performed to improve the recognition accuracy 
+  of a few classes and to prevent model overfitting.
 
-Clone the Repository: Clone this repository to your local machine.
-Install Dependencies: Ensure you have PyTorch, NumPy, and other required libraries installed.
-Run the Models: Execute the model scripts to start the training and evaluation process.
+2. Image pre-processing:
+   
+  - Geometric transformation: RandomVerticalFlip implements a random vertical flip of a given image with a given probability.
+  - Image Enhancement: GaussianBlur implements blurring the image using a randomly selected gaussian blur.
+  - Affine transform: Affine transform is a 2-dimensional linear transform consisting of 5 basic operations, namely, rotation, translation, 
+    scaling, misalignment, and flip.
