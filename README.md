@@ -33,4 +33,8 @@
 
 ## Result
 
+   Accuracy was 92% with the ResNeXt50 with SGD model.
+   
+   ![Picture](images/ResNeXt50SGD.png)
+
    
